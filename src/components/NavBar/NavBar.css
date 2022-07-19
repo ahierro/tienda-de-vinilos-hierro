@@ -1,0 +1,20 @@
+.navigationButtons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.titleAndNav h1{
+    color: white;
+}
+.titleAndNav {
+    text-align: center;
+}
+.logo{
+    height: 100px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: #90adbb;
+    justify-content: space-evenly;
+}
