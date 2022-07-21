@@ -18,3 +18,7 @@
     background-color: #90adbb;
     justify-content: space-evenly;
 }
+.nav{
+    display: flex;
+    flex-direction: row;
+}
