@@ -7,7 +7,6 @@ const NavBar = () => (
   <header class="header">
   <a href="./index.html"><img src={logo} alt="logo" className="logo" /></a>
   <div className="titleAndNav">
-     <h1>Tienda de Vinilos</h1>
     <nav className="nav">
       <ul className="navigationButtons">
         <NavItem categoryName="Rock Nacional" />
