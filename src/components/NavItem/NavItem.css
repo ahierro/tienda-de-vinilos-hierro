@@ -1,11 +1,12 @@
 .navigationButtons li {
     list-style-type: none;
     color: aliceblue;
-    background-color: #90adbb8d;
+    background-color: #9cbac9;
     border: 3px #5a6b728d solid;
     border-radius: 30px;
     padding: 5px;
     margin: 10px;
+    min-width: 140px;
 }
 .navigationButtons li:hover {
     list-style-type: none;

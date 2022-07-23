@@ -2,12 +2,13 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-.titleAndNav h1{
-    color: white;
+    margin-bottom: 0rem;
 }
 .titleAndNav {
+    display: flex;
     text-align: center;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .logo{
     height: 100px;
@@ -17,4 +18,8 @@
     flex-direction: row;
     background-color: #90adbb;
     justify-content: space-evenly;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
 }
