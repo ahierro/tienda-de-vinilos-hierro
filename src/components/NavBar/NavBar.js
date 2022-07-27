@@ -4,7 +4,7 @@ import logo from './../../logo.png';
 import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => (
-  <header class="header">
+  <header className="header">
   <a href="./index.html"><img src={logo} alt="logo" className="logo" /></a>
   <div className="titleAndNav">
     <nav className="nav">

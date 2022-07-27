@@ -13,29 +13,45 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       setCount(count - 1);
     }
   };
+
   return (
     <div className="itemCountComponent">
-      <div>
-        <button
-          type="button"
-          class="btn btn-dark itemButton"
-          {... (count === 0)? {disabled:'disabled'}:{}}
-          onClick={substractFromCounter}
-        >
-          -
-        </button>
+      <div className="minusNumberPlus">
+        <div className="buttonDiv">
+          <button
+            type="button"
+            className="btn btn-dark itemButton"
+            {...(count === 0 ? { disabled: "disabled" } : {})}
+            onClick={substractFromCounter}
+          >
+            -
+          </button>
+        </div>
+        <div className="itemCountNumber noSelect">{count}</div>
+
+        <div className="buttonDiv">
+          <button
+            type="button"
+            className="btn btn-dark itemButton"
+            {...(count === stock ? { disabled: "disabled" } : {})}
+            onClick={addToCounter}
+          >
+            +
+          </button>
+        </div>
       </div>
-      <div className="itemCountNumber">{count}</div>
-      
-      <div>
+      <div className="buttonDiv2">
+        <div>
+
+
         <button
-          type="button"
-          class="btn btn-dark itemButton"
-          {... (count === stock)? {disabled:'disabled'}:{}}
-          onClick={addToCounter}
+          {...(count === 0 ? { disabled: "disabled" } : {})}
+          className="btn btn-primary addButton"
+          onClick={() => onAdd(count)}
         >
-          +
+          Agregar al carrito
         </button>
+        </div>
       </div>
     </div>
   );
