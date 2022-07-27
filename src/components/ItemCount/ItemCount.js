@@ -21,7 +21,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           <button
             type="button"
             className="btn btn-dark itemButton"
-            {...(count === 0 ? { disabled: "disabled" } : {})}
+            {...((count === 0  || !!!stock) ? { disabled: "disabled" } : {})}
             onClick={substractFromCounter}
           >
             -
@@ -33,7 +33,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           <button
             type="button"
             className="btn btn-dark itemButton"
-            {...(count === stock ? { disabled: "disabled" } : {})}
+            {...((count === stock || !!!stock) ? { disabled: "disabled" } : {})}
             onClick={addToCounter}
           >
             +
@@ -42,7 +42,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       </div>
       <div className="buttonDivAdd">
         <button
-          {...(count === 0 ? { disabled: "disabled" } : {})}
+          {...((count === 0 || !!!stock) ? { disabled: "disabled" } : {})}
           className="btn btn-primary addButton"
           onClick={() => onAdd(count)}
         >
