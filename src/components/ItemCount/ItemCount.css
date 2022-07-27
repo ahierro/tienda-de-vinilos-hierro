@@ -1,0 +1,11 @@
+.itemCountComponent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+.itemButton{
+    min-width: 40px;
+}
+.itemCountNumber{
+    min-width: 100px;
+}
