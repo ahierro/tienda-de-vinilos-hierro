@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     margin: 10px;
+    height: 90px;
 }
 .minusNumberPlus{
     display: flex;
@@ -34,8 +35,11 @@
     flex-direction: column;
     justify-content: center;
 }
-.buttonDiv2{
+.buttonDivAdd{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 180px;
+    align-content: center;
+    margin: auto;
 }

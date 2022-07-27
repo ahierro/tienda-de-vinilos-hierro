@@ -40,10 +40,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           </button>
         </div>
       </div>
-      <div className="buttonDiv2">
-        <div>
-
-
+      <div className="buttonDivAdd">
         <button
           {...(count === 0 ? { disabled: "disabled" } : {})}
           className="btn btn-primary addButton"
@@ -51,7 +48,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         >
           Agregar al carrito
         </button>
-        </div>
       </div>
     </div>
   );
