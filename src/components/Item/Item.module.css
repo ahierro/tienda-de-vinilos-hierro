@@ -1,0 +1,14 @@
+.Item {
+    display: flex;
+    flex-direction: column;
+    background-color: #6e848f;
+    border: 5px solid #5a6b728d;
+    color: white;
+    margin: 20px auto;
+    width: 350px;
+    font-size: 18px;
+}
+.itemImg{
+    height: 300px;
+    width: 300px;
+}

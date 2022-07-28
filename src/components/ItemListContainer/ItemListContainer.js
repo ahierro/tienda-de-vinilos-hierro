@@ -1,19 +1,32 @@
 import "./ItemListContainer.css";
-import ItemCount from "./../ItemCount/ItemCount";
+import { useEffect, useState } from "react";
+import ItemList from "./../ItemList/ItemList";
+import { DummyApi } from "./../../api/DummyApi";
+import Spinner from "../Spinner/Spinner";
 
 const ItemListContainer = ({ greeting }) => {
-  const onAdd = (count) =>{
-    if(count>1){
-      console.log(`Se han agregado ${count} items al carrito`);
-    }else{
-      console.log(`Se ha agregado ${count} item al carrito`);
-    }
-  }
+  const [itemsResponse, setItemsResponse] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await DummyApi.getItems(); // llamo al server para q me de los usuarios
+
+        const responseJson = await response.json(); // leo el json de la respuesta del servidor
+        setItemsResponse(responseJson.data);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, []);
   return (
     <div>
       <h1 className="text-center">
         <span className="badge bg-secondary">{greeting}</span>
-        <ItemCount stock={5} initial={1} onAdd={onAdd}></ItemCount>
+        {loading ? <Spinner /> : <ItemList items={itemsResponse} />}
       </h1>
     </div>
   );
