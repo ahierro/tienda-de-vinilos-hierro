@@ -1,0 +1,43 @@
+.ItemDetail {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    border-style: solid;
+    border-width: 5px;
+    margin: 0 auto;
+}
+.ItemDetailColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ItemImg{
+    width: 500;
+    height: 500;
+}
+.title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+.description{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    padding: 10px;
+}
+.stock{
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.price{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}

@@ -17,6 +17,7 @@
     min-width: 100px;
     margin: auto 0;
     font-size: 30px;
+    text-align: center;
 }
 .noSelect {
     -webkit-touch-callout: none; /* iOS Safari */
